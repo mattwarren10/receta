@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bower-rails', '~> 0.11.0'
+gem 'foreman', '~> 0.84.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,12 @@ group :development do
 
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production, :staging do
+  gem 'rails_12factor', '~> 0.0.3'
+  gem 'rails_stdout_logging', '~> 0.0.5'
+  gem 'rails_serve_static_assets', '~> 0.0.5'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
